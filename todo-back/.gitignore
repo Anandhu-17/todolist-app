@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+build/
+
+# Log files
+*.log
+
+# VS Code settings
+.vscode/
+
+# MacOS-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db

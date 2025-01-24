@@ -15,7 +15,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/signup", {
+      await axios.post("https://todolist-app-xvty.onrender.com/todos/signup", {
         username,
         email,
         password,

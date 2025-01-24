@@ -11,7 +11,9 @@ const TodoList = () => {
   // Fetch tasks from the backend
   const fetchTodos = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/todos");
+      const response = await axios.get(
+        "https://todolist-app-xvty.onrender.com/todos"
+      );
       setTodos(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -27,9 +29,12 @@ const TodoList = () => {
   const addTodo = async () => {
     if (input.trim()) {
       try {
-        const response = await axios.post("http://localhost:5000/todos", {
-          text: input,
-        });
+        const response = await axios.post(
+          "https://todolist-app-xvty.onrender.com/todos",
+          {
+            text: input,
+          }
+        );
         setTodos([...todos, response.data]);
         setInput("");
       } catch (error) {
@@ -41,7 +46,7 @@ const TodoList = () => {
   // Remove a to-do
   const removeTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/todos/${id}`);
+      await axios.delete(`https://todolist-app-xvty.onrender.com/todos/${id}`);
       setTodos(todos.filter((todo) => todo._id !== id));
     } catch (error) {
       console.error("Error removing task:", error);
@@ -63,9 +68,12 @@ const TodoList = () => {
   const saveEdit = async (id) => {
     if (editText.trim()) {
       try {
-        const response = await axios.put(`http://localhost:5000/todos/${id}`, {
-          text: editText,
-        });
+        const response = await axios.put(
+          `https://todolist-app-xvty.onrender.com/todos/${id}`,
+          {
+            text: editText,
+          }
+        );
         const updatedTodos = todos.map((todo) =>
           todo._id === id ? response.data : todo
         );

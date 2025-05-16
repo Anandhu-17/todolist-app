@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // MongoDB connection
 mongoose
   .connect(
-    "mongodb+srv://anandhu2101009:12345@cluster0.8vg3s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://anandhu2101009:xxxxx@cluster0.8vg3s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
